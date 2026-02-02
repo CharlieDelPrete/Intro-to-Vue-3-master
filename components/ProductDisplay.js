@@ -58,7 +58,7 @@ template:
     }, 
     methods: {
         addTocart() {
-            this.cart += 1
+            this.$emit('add-to-cart' , this.variant[this.selectedVariant].id)
         },
         updateVariant(index) {
             this.selectedVariant = index
